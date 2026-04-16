@@ -1,0 +1,37 @@
+{
+  "name": "foodapp",
+  "version": "1.0.0",
+  "description": "this is a food app",
+  "keywords": [
+    "food",
+    "delivery"
+  ],
+  "homepage": "https://github.com/ayushmanPanadiya/Food-App#readme",
+  "bugs": {
+    "url": "https://github.com/ayushmanPanadiya/Food-App/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushmanPanadiya/Food-App.git"
+  },
+  "license": "ISC",
+  "author": "ayushman",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^6.30.3"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

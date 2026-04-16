@@ -1,0 +1,94 @@
+
+/* header (logo, nav items) */
+
+.headCont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+}
+.logoImg{
+    width: 70px;
+}
+
+.navItems{
+    display: flex;
+    gap: 20px;
+}
+.navItems >li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.restroImg{
+    padding: 2px;
+    border-radius: 5px;
+    height: 170px;
+    
+}
+.restroCont{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline-block;
+    height: 400px;
+    width: 200px;
+    overflow: hidden;
+    text-align: left;
+   
+}
+.restroCont:hover{
+    background-color: rgb(241, 238, 238);
+    border: 2px solid black;
+    border-radius: 5px  ;
+    cursor: pointer;
+}
+.restroImg {
+  display: block;
+  margin: 0 auto;   /* ✅ centers only image */
+}
+.restroCont h2,
+.restroCont p {
+  padding-left: 10px;   /* adjust as needed */
+}
+.restroName{
+    font-size:25px;
+    font-weight:bold;
+
+}
+.appBody{
+    display: flex;
+    flex-wrap: wrap;
+    
+  
+}
+.cuisine{
+font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+.filter-btn{
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(241, 238, 238);
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: 500;
+    height: 20px;
+    width: 150px;
+}
+.shimmerBox{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmerCont{
+   margin-top: 10px;
+   margin-left: 20px; 
+       height: 400px;
+    width: 200px;
+    background-color: rgb(119, 117, 117);
+}
