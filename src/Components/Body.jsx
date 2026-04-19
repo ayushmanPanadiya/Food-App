@@ -2,9 +2,9 @@ import React from "react";
 import RestroCard from "./RestroCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";
+import { Link } from "react-router-dom";
 
-const API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4788084&lng=77.4920192&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"                                                 
-
+const API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4788078&lng=77.4920192&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
 
 
@@ -30,9 +30,9 @@ const fetchApi = async()=>{
 
 
   
-  if(restro.length===0){
-    return <Shimmer/>
-  }
+  // if(restro.length===0){
+  //   return <Shimmer/>
+  // }
 
   return (
     <div className="bodyCont">
@@ -67,7 +67,7 @@ setrestro(filtered);
 
       <div className="appBody">
       {filteredRes.map((res) => (
-  <RestroCard key={res.info.id} resData={res} />
+  <Link to={`/restaurants/${res.info.id}`}  key={res.info.id}><RestroCard  resData={res} /></Link>
 ))}
       
       </div>
