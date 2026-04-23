@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useRestroMenu from "../utils/useRestroMenu";
+import ResCategory from "./resCategory";
 
 const RestroMenu = ()=>{
  
@@ -22,6 +23,13 @@ const restaurantCard = cards?.find(
 const info = restaurantCard?.card?.card?.info;
 
 // menu-----------------------------------------------
+
+const categoryData = resInfo?.data?.cards
+  ?.find((card) => card?.groupedCard)
+  ?.groupedCard?.cardGroupMap?.REGULAR?.cards
+  ?.filter((c) => c?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+
+console.log(categoryData);  
 
 const menuCards = resInfo?.data?.cards?.find(
   (c) => c?.groupedCard
@@ -47,26 +55,16 @@ return (
    <div className="menuList w-200">
 
   {/* main data */}
-  
+    <div>
+      {categoryData?.map((resCat) => (
+  <ResCategory
+    key={resCat?.card?.card?.title}
+    resCatinfo={resCat}
+  />
+))}
+    </div>
+    
 
- <div className="menuList mt-5 ">
-  {dishes?.length ? (
-    dishes.map((item) => {
-      const info = item?.card?.info;
-      const price = info?.price || info?.defaultPrice;
-
-      return (
-        <div className="mainMenu mainMenu   p-4 mb-4 bg-white rounded-lg shadow-sm" key={info?.id}>
-          <h2 className="menuDish font-bold mt-10">{info?.name}</h2>
-          <h2 className="dishPrice mt-1">₹ {price / 100}</h2>
-          <div className="w-120 mt-2.5 h-15 overflow-hidden"><h2  className="dishInfo text-sm">{info?.description}</h2></div>
-        </div>
-      );
-    })
-  ) : (
-    <h2>No dishes found</h2>
-  )}
-</div>
 
 
     </div>
