@@ -8,6 +8,8 @@ const RestroMenu = ()=>{
  
 const {resId} = useParams();
 
+const [showIndex,setshowIndex] = useState(0);
+
 const resInfo = useRestroMenu(resId);
 
  if (!resInfo) return <h1>Loading...</h1>;
@@ -56,10 +58,12 @@ return (
 
   {/* main data */}
     <div>
-      {categoryData?.map((resCat) => (
+     {categoryData?.map((resCat, index) => (
   <ResCategory
     key={resCat?.card?.card?.title}
     resCatinfo={resCat}
+    showMenu={index === showIndex}
+    setshowIndex={() => setshowIndex(index === showIndex ? null : index)}
   />
 ))}
     </div>

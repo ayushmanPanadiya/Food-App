@@ -1,7 +1,9 @@
 import React from "react";
+import { useContext } from "react";
+import UserData from "../utils/context";
 import { IMG_URL } from "../assets/URL";
 const RestroCard = (props) => {
-
+  const data = useContext(UserData);
   const {
     cloudinaryImageId,
     name,
@@ -26,6 +28,8 @@ const RestroCard = (props) => {
       <p className="ml-2">⭐ {avgRating}</p>
       <p className="ml-2">{sla?.deliveryTime} mins</p>
       <p className="ml-2">{costForTwo}</p>
+      {/* <p className="ml-2">{data.loggedUser}</p> */}
+     
     </div>
   );
 };
