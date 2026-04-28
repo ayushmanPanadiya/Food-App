@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="flex flex-col items-center w-full py-10 px-4 bg-gray-50 min-h-screen">
 
-      {/* Hero Section */}
+      
       <div className="flex flex-col items-center text-center max-w-2xl mb-16">
         <div className="text-7xl mb-4">🍕</div>
         <h1 className="text-4xl font-extrabold text-gray-800 mb-4">About FoodApp</h1>
@@ -14,7 +14,7 @@ const About = () => {
         </p>
       </div>
 
-      {/* Stats */}
+      
       <div className="flex gap-8 mb-16">
         <div className="flex flex-col items-center bg-white px-10 py-6 rounded-2xl shadow-sm">
           <h2 className="text-4xl font-extrabold text-orange-500">500+</h2>
@@ -34,7 +34,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Our Story */}
+     
       <div className="flex gap-8 max-w-4xl w-full mb-16 items-center">
         <div className="text-8xl w-1/3 text-center">👨‍🍳</div>
         <div className="w-2/3">
@@ -52,7 +52,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Values */}
+      
       <div className="max-w-4xl w-full mb-16">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">What We Stand For</h2>
         <div className="flex gap-6">
@@ -74,7 +74,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Team */}
+    
       <div className="max-w-4xl w-full mb-16">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">Meet the Team</h2>
         <div className="flex gap-6 justify-center">
@@ -92,7 +92,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* CTA */}
+      
       <div className="flex flex-col items-center bg-orange-500 text-white w-full max-w-4xl rounded-2xl py-10 px-6 text-center">
         <h2 className="text-2xl font-bold mb-2">Hungry? Let's fix that.</h2>
         <p className="mb-6 text-orange-100">Order from hundreds of restaurants near you.</p>

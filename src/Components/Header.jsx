@@ -20,7 +20,6 @@ const cartItems = useSelector((store)=> store.cart.items)
   return (
     <div className="headCont flex justify-between shadow-sm shadow-gray-300 mb-2 h-20">
   
-  {/* Logo + Username together on the left */}
   <div className="flex items-center gap-3">
     <img
       src={image}
@@ -30,7 +29,6 @@ const cartItems = useSelector((store)=> store.cart.items)
     <h3 className="font-bold text-lg text-gray-700">Hello, {data.loggedUser}</h3>
   </div>
 
-  {/* Nav on the right */}
   <div className="navCont mr-5 flex items-center">
     <ul className="navItems flex">
       <li className="mx-5 font-semibold text-lg">

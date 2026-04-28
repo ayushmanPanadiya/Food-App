@@ -1,8 +1,8 @@
 import React from "react";  
 import RestroCard,{enhancedRestro} from "./RestroCard";
 import { useState, useEffect } from "react";
-import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
+import ShimmerHome from "./shimmer";
 
 const API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4788078&lng=77.4920192&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
@@ -38,9 +38,9 @@ const fetchApi = async()=>{
 
 console.log(restro);
   
-  // if(restro.length===0){
-  //   return <Shimmer/>
-  // }
+  if(restro.length===0){
+    return <ShimmerHome />
+  }
 
   return (
     <div className="bodyCont ">

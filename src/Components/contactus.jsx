@@ -9,7 +9,6 @@ const Contact = () => {
 
       <div className="flex w-full max-w-4xl gap-8">
 
-        {/* Left — Info */}
         <div className="flex flex-col gap-6 w-1/2 bg-orange-500 text-white p-8 rounded-2xl">
           <h2 className="text-xl font-bold">Get in Touch with Our Team</h2>
           <div>
@@ -30,7 +29,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right — FAQ */}
         <div className="flex flex-col w-1/2 bg-white p-8 rounded-2xl shadow-md gap-4">
           <h2 className="text-xl font-bold text-gray-800">FAQs</h2>
           <div>

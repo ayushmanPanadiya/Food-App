@@ -56,7 +56,6 @@ return (
     </div>
    <div className="menuList w-200">
 
-  {/* main data */}
     <div>
      {categoryData?.map((resCat, index) => (
   <ResCategory
